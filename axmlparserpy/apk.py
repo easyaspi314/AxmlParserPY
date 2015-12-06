@@ -267,6 +267,14 @@ class APK:
         """
         return self.get_element("uses-sdk", "android:targetSdkVersion")
     target_sdk_version = property(get_target_sdk_version)
+    
+    def get_max_sdk_version(self):
+        """
+            Return the android:maxSdkVersion attribute
+        """
+        return self.get_element("uses-sdk", "android:maxSdkVersion")
+    max_sdk_version = property(get_max_sdk_version)
+
 
     def get_libraries(self):
         """
